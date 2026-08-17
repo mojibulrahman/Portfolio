@@ -238,31 +238,34 @@ function initContactForm() {
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    const formData = new FormData(form);
-
     note.textContent = 'Sending message...';
 
+    const formData = new FormData(form);
+
     try {
-      const response = await fetch(form.action, {
+      const response = await fetch('https://formspree.io/f/mnpagkgd', {
         method: 'POST',
         body: formData,
         headers: {
-          Accept: 'application/json'
+          'Accept': 'application/json'
         }
       });
 
       if (response.ok) {
+        note.style.color = '#22d3ee';
         note.textContent = 'Message sent successfully! I will get back to you soon.';
         form.reset();
       } else {
-        note.textContent = 'Unable to send message. Please try again.';
+        note.style.color = '#f87171';
+        note.textContent = 'Message could not be sent. Please try again.';
       }
+
     } catch (error) {
+      note.style.color = '#f87171';
       note.textContent = 'Something went wrong. Please try again.';
     }
   });
 }
-
 /* ----------------------------------------------------------
    9. BACK TO TOP BUTTON
 ---------------------------------------------------------- */
