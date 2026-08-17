@@ -233,47 +233,34 @@ function initContactForm() {
   const form = document.getElementById('contact-form');
   if (!form) return;
 
-  const fields = {
-    name: { el: document.getElementById('name'), validate: (v) => v.trim().length >= 2, message: 'Please enter your name.' },
-    email: { el: document.getElementById('email'), validate: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()), message: 'Please enter a valid email address.' },
-    subject: { el: document.getElementById('subject'), validate: (v) => v.trim().length >= 3, message: 'Please enter a subject.' },
-    message: { el: document.getElementById('message'), validate: (v) => v.trim().length >= 10, message: 'Message should be at least 10 characters.' },
-  };
-
   const note = document.getElementById('form-note');
 
-  Object.entries(fields).forEach(([key, field]) => {
-    field.el.addEventListener('blur', () => validateField(key, field));
-  });
-
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    let allValid = true;
 
-    Object.entries(fields).forEach(([key, field]) => {
-      const valid = validateField(key, field);
-      if (!valid) allValid = false;
-    });
+    const formData = new FormData(form);
 
-    if (!allValid) {
-      note.textContent = 'Please fix the errors above.';
-      note.style.color = '#f87171';
-      return;
+    note.textContent = 'Sending message...';
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          Accept: 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        note.textContent = 'Message sent successfully! I will get back to you soon.';
+        form.reset();
+      } else {
+        note.textContent = 'Unable to send message. Please try again.';
+      }
+    } catch (error) {
+      note.textContent = 'Something went wrong. Please try again.';
     }
-
-    note.style.color = '';
-    note.textContent = 'Thanks for reaching out! This form is not yet connected to a backend, so please email me directly at mojibulrahman489@gmail.com.';
-    form.reset();
   });
-
-  function validateField(key, field) {
-    const value = field.el.value;
-    const valid = field.validate(value);
-    const errorEl = document.getElementById(`${key}-error`);
-    errorEl.textContent = valid ? '' : field.message;
-    field.el.closest('.form-row').classList.toggle('error', !valid);
-    return valid;
-  }
 }
 
 /* ----------------------------------------------------------
