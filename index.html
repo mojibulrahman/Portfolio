@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mojibul Rahman | Vision Engineer — Machine Vision & AI Automation</title>
+<meta name="description" content="Portfolio of Mojibul Rahman, a Vision Engineer specializing in Machine Vision, 2D/3D Vision, AI Classification, Camera Calibration and Industrial Automation using KEYENCE, OPT Smart3 and FANUC vision systems.">
+<meta name="keywords" content="Vision Engineer, Machine Vision Engineer, Computer Vision Engineer, AI Automation Engineer, KEYENCE, OPT Smart3, FANUC iRVision, Image Processing, Industrial Automation">
+<meta name="author" content="Mojibul Rahman">
+
+<meta property="og:title" content="Mojibul Rahman | Vision Engineer">
+<meta property="og:description" content="Machine Vision & AI Automation Engineer — 3+ years developing 2D/3D vision inspection systems for industrial manufacturing.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grid-overlay" aria-hidden="true"></div>
+<canvas id="vision-canvas" aria-hidden="true"></canvas>
+
+<!-- NAVIGATION -->
+<header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">MR<span>.</span></a>
+    <nav class="nav-links" id="nav-links">
+      <a href="#home" class="nav-link active" data-section="home">Home</a>
+      <a href="#about" class="nav-link" data-section="about">About</a>
+      <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+      <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+      <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+      <a href="#education" class="nav-link" data-section="education">Education</a>
+      <a href="#resume" class="nav-link" data-section="resume">Resume</a>
+      <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <p class="hero-eyebrow reveal">MACHINE VISION &middot; COMPUTER VISION &middot; AI &middot; INDUSTRIAL AUTOMATION</p>
+    <h1 class="hero-name reveal">MOJIBUL RAHMAN</h1>
+    <h2 class="hero-role reveal">
+      <span id="typed-role"></span><span class="cursor" aria-hidden="true">|</span>
+    </h2>
+    <p class="hero-desc reveal">
+      Application Engineer with 3+ years of hands-on experience building and commissioning
+      Machine Vision systems on KEYENCE and OPT Smart3 platforms. Focused on 2D/3D inspection,
+      AI-based classification &amp; segmentation, camera calibration, and production troubleshooting
+      across industrial manufacturing lines.
+    </p>
+    <div class="hero-actions reveal">
+      <a href="#projects" class="btn btn-primary">View My Work</a>
+      <a href="assets/Mojibul_Rahman.pdf" download class="btn btn-outline">Download Resume</a>
+    </div>
+    <div class="hero-socials reveal">
+      <a href="https://www.linkedin.com/in/mojibul-rahman-7b15bb231" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+      </a>
+      <a href="mailto:mojibulrahman489@gmail.com" aria-label="Send email">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M2 4h20a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm19.16 2H2.84L12 12.5 21.16 6zM3 7.24V18h18V7.24l-9 6.51-9-6.51z"/></svg>
+      </a>
+      <a href="tel:+919971406916" aria-label="Call phone number">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24 11.36 11.36 0 0 0 3.57.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.36 11.36 0 0 0 .57 3.57 1 1 0 0 1-.25 1.01l-2.2 2.21z"/></svg>
+      </a>
+    </div>
+  </div>
+  <a href="#about" class="scroll-indicator" aria-label="Scroll to About section">
+    <span></span>
+  </a>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="section-inner">
+    <p class="section-tag reveal">01 &mdash; About</p>
+    <h2 class="section-title reveal">Engineering reliable vision on the factory floor</h2>
+
+    <div class="about-grid">
+      <div class="about-photo reveal">
+        <div class="photo-frame">
+          <img src="assets/kaifi.jpeg"
+         alt="Mojibul Rahman"
+         class="profile-image">
+
+          <div class="photo-corner tl"></div>
+          <div class="photo-corner br"></div>
+        </div>
+      </div>
+
+      <div class="about-content reveal">
+        <p class="about-text">
+          I'm a Vision Engineer based in Bangalore, India, currently supporting on-site vision
+          engineering at <strong>Bosch Limited</strong> through Reyocto Infotech. Over the past
+          three years I've moved through vision-focused roles at an OSS vendor for KEYENCE
+          and at OPT Vision Limited, building and commissioning 2D/3D inspection systems for
+          manufacturing lines &mdash; from initial camera calibration to stable production deployment.
+        </p>
+        <p class="about-text">
+          My work centers on translating physical inspection requirements into working vision
+          programs: setting up AI classification and segmentation on KEYENCE VS Creator,
+          building 3D laser-profiler inspections on the LJ-X, and troubleshooting CCD cameras,
+          lighting, and communication interfaces during live production support.
+        </p>
+
+        <div class="about-cards">
+          <div class="about-card">
+            <span class="about-card-value">3+</span>
+            <span class="about-card-label">Years Experience</span>
+          </div>
+          <div class="about-card">
+            <span class="about-card-value">2D/3D</span>
+            <span class="about-card-label">Vision Inspection</span>
+          </div>
+          <div class="about-card">
+            <span class="about-card-value">AI</span>
+            <span class="about-card-label">Classification &amp; Segmentation</span>
+          </div>
+          <div class="about-card">
+            <span class="about-card-value">4</span>
+            <span class="about-card-label">Industrial Roles</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="section section-alt" id="skills">
+  <div class="section-inner">
+    <p class="section-tag reveal">02 &mdash; Skills</p>
+    <h2 class="section-title reveal">Technical toolkit</h2>
+
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <span class="skill-num">01</span>
+        <h3>Machine Vision</h3>
+        <ul>
+          <li>KEYENCE VisionEditor</li>
+          <li>KEYENCE VS Creator</li>
+          <li>KEYENCE LJ-X 3D Laser Profiler</li>
+          <li>KEYENCE IV4 AI Vision Sensor</li>
+          <li>OPT Smart3</li>
+          <li>FANUC 3D iRVision</li>
+        </ul>
+      </div>
+
+      <div class="skill-card reveal">
+        <span class="skill-num">02</span>
+        <h3>Computer Vision / AI</h3>
+        <ul>
+          <li>AI Classification</li>
+          <li>AI Segmentation</li>
+          <li>Image Processing</li>
+          <li>OCR / OCV</li>
+          <li>Barcode Inspection</li>
+          <li>OpenCV (Python)</li>
+        </ul>
+      </div>
+
+      <div class="skill-card reveal">
+        <span class="skill-num">03</span>
+        <h3>3D Vision &amp; Calibration</h3>
+        <ul>
+          <li>3D Laser Profiling</li>
+          <li>CCD Camera Setup</li>
+          <li>User Frame Calibration</li>
+          <li>Rotation &amp; Multipoint Calibration</li>
+          <li>LBU Setup</li>
+          <li>Template Teaching</li>
+        </ul>
+      </div>
+
+      <div class="skill-card reveal">
+        <span class="skill-num">04</span>
+        <h3>Programming</h3>
+        <ul>
+          <li>Python</li>
+          <li>C#</li>
+          <li>.NET</li>
+          <li>SQL</li>
+        </ul>
+      </div>
+
+      <div class="skill-card reveal">
+        <span class="skill-num">05</span>
+        <h3>Automation</h3>
+        <ul>
+          <li>Vision System Integration</li>
+          <li>Machine Commissioning</li>
+          <li>NPI (New Product Introduction)</li>
+          <li>Production Support</li>
+          <li>Troubleshooting</li>
+        </ul>
+      </div>
+
+      <div class="skill-card reveal">
+        <span class="skill-num">06</span>
+        <h3>Tools &amp; Collaboration</h3>
+        <ul>
+          <li>Cross-functional teamwork with PLC &amp; robotics engineers</li>
+          <li>On-site &amp; remote technical support</li>
+          <li>Customer deployment &amp; validation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="section" id="experience">
+  <div class="section-inner">
+    <p class="section-tag reveal">03 &mdash; Experience</p>
+    <h2 class="section-title reveal">Career timeline</h2>
+
+    <div class="timeline">
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-head">
+            <h3>Vision Engineer</h3>
+            <span class="timeline-date">April 2026 &ndash; Present</span>
+          </div>
+          <p class="timeline-company">Reyocto Infotech Pvt Ltd &middot; Bangalore, India</p>
+          <p class="timeline-client">Client: Bosch Limited (on-site)</p>
+          <ul class="timeline-list">
+            <li>Providing on-site vision engineering support for vision system development, commissioning, and production support.</li>
+            <li>Developing KEYENCE LJ-X 3D Laser Profiler inspection programs for presence/absence and defect detection.</li>
+            <li>Configuring KEYENCE VS Creator applications using AI Classification and Segmentation tools for automated inspection.</li>
+            <li>Developing inspection applications on the KEYENCE IV4 AI Vision Sensor for presence/absence detection.</li>
+            <li>Performing vision debugging, parameter tuning, validation, and troubleshooting to ensure stable production performance.</li>
+          </ul>
+          <div class="timeline-tech">
+            <span>KEYENCE LJ-X 3D</span><span>VS Creator</span><span>IV4 AI Vision Sensor</span><span>AI Classification</span><span>AI Segmentation</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-head">
+            <h3>Application Engineer</h3>
+            <span class="timeline-date">November 2024 &ndash; April 2026</span>
+          </div>
+          <p class="timeline-company">OPT Vision Limited &middot; Bangalore, India</p>
+          <p class="timeline-client">Client: XNG Pvt. Ltd., Peenya, Bangalore</p>
+          <ul class="timeline-list">
+            <li>Supported machine development, designing and integrating vision programs for new machines.</li>
+            <li>Designed and implemented vision programs using OPT Vision / Smart3 software for accurate inspection.</li>
+            <li>Performed LBU setup, rotation calibration, multipoint calibration, fine-tuning, and template teaching for stable, precise results.</li>
+            <li>Provided remote and on-site technical support, resolving vision-related issues during machine setup and production.</li>
+            <li>Supported NPI and LBU activities at multiple customer sites across Bangalore and Chennai.</li>
+          </ul>
+          <div class="timeline-tech">
+            <span>OPT Smart3</span><span>Calibration</span><span>NPI</span><span>Template Teaching</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-head">
+            <h3>Vision Engineer</h3>
+            <span class="timeline-date">July 2023 &ndash; November 2024</span>
+          </div>
+          <p class="timeline-company">Lihexing / P&amp;A &middot; Bangalore, India</p>
+          <p class="timeline-client">OSS Vendor supporting KEYENCE Limited &middot; Clients: TATA Electronics System Solution, Foxconn</p>
+          <ul class="timeline-list">
+            <li>Developed and optimized vision inspection programs using KEYENCE VisionEditor for industrial automation applications.</li>
+            <li>Performed camera setup, user frame calibration, rotation calibration, multipoint calibration, lens adjustment, and lighting optimization.</li>
+            <li>Integrated vision systems during machine commissioning and provided on-site production support.</li>
+            <li>Deployed and maintained vision systems at major customer sites including TATA Electronics System Solution and Foxconn.</li>
+            <li>Diagnosed and resolved issues related to CCD cameras, 3D laser sensors, vision programs, lighting systems, and communication interfaces.</li>
+            <li>Collaborated with customers, PLC engineers, robotics engineers, and automation teams for seamless machine integration.</li>
+          </ul>
+          <div class="timeline-tech">
+            <span>KEYENCE VisionEditor</span><span>CCD Cameras</span><span>3D Laser Sensors</span><span>Machine Commissioning</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MACHINE VISION EXPERTISE -->
+<section class="section section-alt" id="expertise">
+  <div class="section-inner">
+    <p class="section-tag reveal">04 &mdash; Expertise</p>
+    <h2 class="section-title reveal">Machine Vision Expertise</h2>
+
+    <div class="expertise-grid">
+      <div class="expertise-card reveal">
+        <div class="expertise-icon">2D</div>
+        <h3>2D Vision</h3>
+        <p>OPT Smart3 &amp; KEYENCE VisionEditor inspection programs, presence/absence checks, template teaching.</p>
+      </div>
+      <div class="expertise-card reveal">
+        <div class="expertise-icon">3D</div>
+        <h3>3D Vision</h3>
+        <p>KEYENCE LJ-X 3D Laser Profiler programs and FANUC 3D iRVision for defect and presence detection.</p>
+      </div>
+      <div class="expertise-card reveal">
+        <div class="expertise-icon">AI</div>
+        <h3>AI Vision</h3>
+        <p>AI Classification &amp; Segmentation on KEYENCE VS Creator; inspection on the IV4 AI Vision Sensor.</p>
+      </div>
+      <div class="expertise-card reveal">
+        <div class="expertise-icon">&#8982;</div>
+        <h3>Calibration</h3>
+        <p>CCD camera setup, user frame, rotation &amp; multipoint calibration, LBU setup, lens &amp; lighting tuning.</p>
+      </div>
+      <div class="expertise-card reveal">
+        <div class="expertise-icon">IMG</div>
+        <h3>Image Processing</h3>
+        <p>OCR/OCV, barcode inspection, and general image processing pipelines for quality inspection.</p>
+      </div>
+      <div class="expertise-card reveal">
+        <div class="expertise-icon">QA</div>
+        <h3>Inspection</h3>
+        <p>Defect detection, presence/absence checks, and validation across high-volume production lines.</p>
+      </div>
+      <div class="expertise-card reveal">
+        <div class="expertise-icon">&#9881;</div>
+        <h3>Automation</h3>
+        <p>Vision system integration, machine commissioning, NPI support, and production troubleshooting.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section" id="projects">
+  <div class="section-inner">
+    <p class="section-tag reveal">05 &mdash; Projects</p>
+    <h2 class="section-title reveal">Selected work</h2>
+
+    <div class="filter-bar reveal" role="tablist" aria-label="Filter projects by category">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="machine-vision">Machine Vision</button>
+      <button class="filter-btn" data-filter="computer-vision">Computer Vision</button>
+      <button class="filter-btn" data-filter="ai">AI</button>
+      <button class="filter-btn" data-filter="programming">Programming</button>
+    </div>
+
+    <div class="projects-grid" id="projects-grid">
+
+      <article class="project-card reveal" data-category="computer-vision ai programming">
+        <div class="project-visual visual-facerec">
+
+          <div class="face-detection">
+
+              <div class="face-card known">
+                <img src="assets/face1.avif" alt="Detected face">
+                <span class="face-label">JOHN</span>
+              </div>
+
+              <div class="face-card unknown">
+                <img src="assets/face2.jpg" alt="Detected face">
+                <span class="face-label">UNKNOWN</span>
+              </div>
+
+              <div class="face-card known">
+                <img src="assets/face3.avif" alt="Detected face">
+                <span class="face-label">KEVIN</span>
+              </div>
+
+              <div class="scan-line"></div>
+
+          </div>
+
+        </div>
+        <div class="project-body">
+          <h3>Real-Time Face Recognition System</h3>
+          <p class="project-role">Independent Project &amp; Research</p>
+          <p class="project-desc">
+            A secure, real-time face recognition system built with Python, OpenCV, and
+            machine-learning algorithms, designed to support touchless attendance and secure
+            authentication workflows. Findings were published as a research paper.
+          </p>
+          <div class="project-tech">
+            <span>Python</span><span>OpenCV</span><span>Machine Learning</span>
+          </div>
+          <ul class="project-features">
+            <li>Real-time face detection and recognition pipeline</li>
+            <li>Designed for touchless attendance &amp; authentication</li>
+            <li>Research paper published: "Face Recognition System Using OpenCV"</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="project-card reveal" data-category="machine-vision ai">
+        <div class="project-visual visual-3d" aria-hidden="true">
+          <div class="laser-grid">
+            <div class="laser-line"></div>
+            <div class="profile-dots"></div>
+          </div>
+        </div>
+        <div class="project-body">
+          <h3>3D Laser Profiling Inspection (KEYENCE LJ-X)</h3>
+          <p class="project-role">Vision Engineer &mdash; Reyocto Infotech @ Bosch Limited</p>
+          <p class="project-desc">
+            Developed 3D inspection programs on the KEYENCE LJ-X Laser Profiler for
+            presence/absence and defect detection on production lines, with parameter tuning
+            and validation to maintain stable throughput.
+          </p>
+          <div class="project-tech">
+            <span>KEYENCE LJ-X 3D</span><span>Calibration</span><span>Defect Detection</span>
+          </div>
+          <ul class="project-features">
+            <li>Presence/absence and surface defect detection</li>
+            <li>Parameter tuning and production validation</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="project-card reveal" data-category="machine-vision ai">
+        <div class="project-visual visual-classify" aria-hidden="true">
+          <div class="ai-box b1"></div>
+          <div class="ai-box b2"></div>
+          <div class="ai-label">AI</div>
+        </div>
+        <div class="project-body">
+          <h3>AI Classification &amp; Segmentation Inspection</h3>
+          <p class="project-role">Vision Engineer &mdash; Reyocto Infotech @ Bosch Limited</p>
+          <p class="project-desc">
+            Configured KEYENCE VS Creator applications using AI classification and segmentation
+            tools to automate visual inspection, reducing manual judgment on the line.
+          </p>
+          <div class="project-tech">
+            <span>KEYENCE VS Creator</span><span>AI Classification</span><span>AI Segmentation</span>
+          </div>
+          <ul class="project-features">
+            <li>Automated inspection using trained AI models</li>
+            <li>Vision debugging and stability validation</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="project-card reveal" data-category="machine-vision">
+        <div class="project-visual visual-calibration" aria-hidden="true">
+          <div class="calib-crosshair"></div>
+          <div class="calib-ring"></div>
+        </div>
+        <div class="project-body">
+          <h3>Multi-Point Vision Calibration &amp; NPI Deployment</h3>
+          <p class="project-role">Application Engineer &mdash; OPT Vision Limited @ XNG Pvt. Ltd.</p>
+          <p class="project-desc">
+            Performed LBU setup, rotation and multipoint calibration, and template teaching
+            across new machines, supporting NPI and LBU deployment at multiple customer
+            sites in Bangalore and Chennai.
+          </p>
+          <div class="project-tech">
+            <span>OPT Smart3</span><span>Multipoint Calibration</span><span>NPI</span>
+          </div>
+          <ul class="project-features">
+            <li>Stable, precise vision program deployment on new machines</li>
+            <li>On-site and remote troubleshooting support</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="section section-alt" id="education">
+  <div class="section-inner">
+    <p class="section-tag reveal">06 &mdash; Education</p>
+    <h2 class="section-title reveal">Academic background</h2>
+
+    <div class="edu-list">
+      <div class="edu-card reveal">
+        <div class="edu-year">2019 &ndash; 2023</div>
+        <div class="edu-info">
+          <h3>B.Tech in Information Technology</h3>
+          <p>Guru Nanak Institute of Technology &middot; Kolkata, West Bengal</p>
+          <span class="edu-score">DGPA: 8.76</span>
+        </div>
+      </div>
+      <div class="edu-card reveal">
+        <div class="edu-year">2018</div>
+        <div class="edu-info">
+          <h3>Intermediate</h3>
+          <p>Ram Rati Devi Inter College Chauki Hasan, Siwan (BSEB) &middot; Siwan, Bihar</p>
+          <span class="edu-score">Percentage: 58.8%</span>
+        </div>
+      </div>
+      <div class="edu-card reveal">
+        <div class="edu-year">2015</div>
+        <div class="edu-info">
+          <h3>Matriculation</h3>
+          <p>Emmanuel Mission High School, Siwan (CBSE) &middot; Siwan, Bihar</p>
+          <span class="edu-score">CGPA: 7</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESUME -->
+<section class="section resume-section" id="resume">
+  <div class="section-inner resume-inner reveal">
+    <p class="section-tag">07 &mdash; Resume</p>
+    <h2 class="section-title">Want to know more about my experience?</h2>
+    <p class="resume-desc">Download my full resume for a complete overview of my experience, technical skills, and education.</p>
+    <div class="hero-actions">
+      <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline">View Resume</a>
+      <a href="assets/resume.pdf" download class="btn btn-primary">Download Resume</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="section-inner">
+    <p class="section-tag reveal">08 &mdash; Contact</p>
+    <h2 class="section-title reveal">Let's talk vision</h2>
+
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <p class="contact-lead">
+          Open to Vision Engineer, Machine Vision, Computer Vision, and AI/Automation
+          Engineering roles. Reach out directly &mdash; I usually respond within a day.
+        </p>
+        <ul class="contact-list">
+          <li>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 4h20a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z"/><path d="M2 6l10 7 10-7"/></svg>
+            <a href="mailto:mojibulrahman489@gmail.com">mojibulrahman489@gmail.com</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24 11.36 11.36 0 0 0 3.57.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.36 11.36 0 0 0 .57 3.57 1 1 0 0 1-.25 1.01l-2.2 2.21z"/></svg>
+            <a href="tel:+919971406916">+91 99714 06916</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <span>Bangalore, India</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+            <a href="https://www.linkedin.com/in/mojibul-rahman-7b15bb231" target="_blank" rel="noopener noreferrer">linkedin.com/in/mojibul-rahman-7b15bb231</a>
+          </li>
+        </ul>
+      </div>
+
+      <form class="contact-form reveal" id="contact-form" novalidate>
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" autocomplete="name" required>
+          <span class="form-error" id="name-error"></span>
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+          <span class="form-error" id="email-error"></span>
+        </div>
+        <div class="form-row">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" required>
+          <span class="form-error" id="subject-error"></span>
+        </div>
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+          <span class="form-error" id="message-error"></span>
+        </div>
+        <button type="submit" class="btn btn-primary form-submit">Send Message</button>
+        <p class="form-note" id="form-note" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>&copy; <span id="year"></span> Mojibul Rahman &middot; Vision Engineer</p>
+</footer>
+
+<button id="back-to-top" class="back-to-top" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<button id="theme-toggle" class="theme-toggle" aria-label="Toggle light and dark mode">
+  <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12.5A9 9 0 1 1 11.5 3a7 7 0 0 0 9.5 9.5z"/></svg>
+  <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
+<!-- This banner is automatically inserted by Netlify for private projects. -->
+<div
+  id="netlify-private-banner"
+  style="
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2147483647;
+    display: flex;
+    align-items: start;
+    gap: 8px;
+    padding: 8px 16px;
+    background: #0c2a2a;
+    background-clip: padding-box;
+    border-bottom: 1px solid rgba(1, 72, 71, 0.75);
+    color: #95c9c6;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  "
+>
+  <span
+    style="
+      flex-shrink: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      background: #014847;
+      border-radius: 4px;
+    "
+    ><svg
+      width="14"
+      height="14"
+      viewBox="0 0 14 14"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M4.09093 6.3711L4.1371 4.38759C4.1371 3.68304 4.48998 2.93326 4.97267 2.43516C5.45536 1.93707 6.27385 1.62813 6.95634 1.62842L7.09817 1.625C8.51696 1.62679 9.81311 2.632 9.8324 4.34718L9.85133 6.3612C10.0406 6.39276 10.2296 6.42748 10.4182 6.46536L10.4695 6.47537C10.7413 6.53042 10.9379 6.78306 10.9375 7.07699V11.2583C10.9378 11.5526 10.7407 11.8054 10.4684 11.8599L10.1187 11.93C9.09069 12.1364 8.04675 12.2403 7.00052 12.2403C5.95395 12.2404 4.90966 12.1365 3.88131 11.93L3.53159 11.8599C3.25931 11.8054 3.06223 11.5526 3.0625 11.2583V7.07699C3.06223 6.78271 3.25931 6.52995 3.53159 6.47537L3.58289 6.46536C3.75192 6.4314 3.92128 6.39998 4.09093 6.3711ZM5.53422 6.18723C6.54839 6.10106 7.56764 6.10443 8.58142 6.19736L8.54944 4.40584C8.5518 3.71413 7.89166 2.91809 7.08354 2.89256H6.98826C6.29341 2.88825 5.59664 3.58926 5.52237 4.40584L5.53422 6.18723Z"
+        fill="#8EFBF7"
+      /></svg
+  ></span>
+  <span
+    ><span style="color: #defffe; font-weight: 500"
+      >This project is private.</span
+    >
+    Only project members can view this site and its deploy previews.
+    <a
+      href="https://app.netlify.com/projects/e5853d3e-ac28-4090-91a4-972ea4cb7247"
+      target="_blank"
+      rel="noopener noreferrer"
+      style="
+        color: #defffe;
+        text-decoration: underline;
+        text-decoration-color: #02807d;
+        text-decoration-thickness: 1.5px;
+        text-underline-offset: 2px;
+        font-weight: 500;
+      "
+      >Go live or manage access</a
+    >
+    in Netlify.</span
+  >
+  <button
+    id="netlify-private-banner-dismiss"
+    type="button"
+    aria-label="Dismiss"
+    style="
+      margin-left: auto;
+      flex-shrink: 0;
+      background: none;
+      border: 0;
+      padding: 0 4px;
+      color: #95c9c6;
+      font-size: 18px;
+      line-height: 1;
+      cursor: pointer;
+    "
+  >
+    &times;
+  </button>
+</div>
+<script>
+  (function () {
+    var k = "netlify-private-banner-dismissed:e5853d3e-ac28-4090-91a4-972ea4cb7247";
+    var b = document.getElementById("netlify-private-banner");
+    if (!b) {
+      return;
+    }
+    try {
+      if (localStorage.getItem(k)) {
+        b.remove();
+        return;
+      }
+    } catch (e) {}
+    var d = document.getElementById("netlify-private-banner-dismiss");
+    if (d) {
+      d.addEventListener("click", function () {
+        try {
+          localStorage.setItem(k, "1");
+        } catch (e) {}
+        b.remove();
+      });
+    }
+  })();
+</script>
